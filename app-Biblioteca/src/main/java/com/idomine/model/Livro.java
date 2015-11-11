@@ -76,7 +76,6 @@ public class Livro {
 	}
 
 	public Livro() {
-		super();
 	} 
 	
 	

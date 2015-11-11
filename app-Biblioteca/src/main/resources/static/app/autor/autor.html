@@ -1,0 +1,19 @@
+<div>
+	Autor
+	<div class="row">
+		<table class="table table-hover table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>#</th>					
+					<th>Autor</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="a in autores">
+					<th scope="row">{{a.id}}</th>
+					<td>{{a.nome}}</td>					
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

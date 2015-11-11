@@ -1,0 +1,17 @@
+<img ng-src="{{flagURL}}" width="20">
+
+<a href="#/{{country.id}}">{{country.name}}</a>
+app.js
+
+
+var countryApp = angular.module('countryApp', [
+
+  'ngRoute',
+
+  'countryControllers',
+
+  'countriesFactory',
+
+  'countryDirective'
+
+]);

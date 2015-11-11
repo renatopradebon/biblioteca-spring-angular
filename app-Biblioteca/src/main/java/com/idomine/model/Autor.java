@@ -1,9 +1,12 @@
 package com.idomine.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -20,6 +23,19 @@ public class Autor {
 	
 	@Transient
 	private String nomeToUpperCase;
+	
+
+	@OneToMany(mappedBy="autor")
+	private List<Livro> livros;
+	
+
+	public List<Livro> getLivros() {
+		return livros;
+	}
+
+	public void setLivros(List<Livro> livros) {
+		this.livros = livros;
+	}
 
 	public long getId() {
 		return id;
@@ -38,7 +54,7 @@ public class Autor {
 	}
 
 	public String getNomeToUpperCase() {
-		return nomeToUpperCase;
+		return getNome().toUpperCase();
 	}
 
 	public void setNomeToUpperCase(String nomeToUpperCase) {

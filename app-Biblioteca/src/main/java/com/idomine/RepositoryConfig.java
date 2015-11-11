@@ -6,6 +6,7 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguratio
 
 import com.idomine.model.Autor;
 import com.idomine.model.Livro;
+import com.idomine.model.Usuario;
 
 @Configuration
 public class RepositoryConfig extends RepositoryRestMvcConfiguration {
@@ -13,5 +14,8 @@ public class RepositoryConfig extends RepositoryRestMvcConfiguration {
     protected void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
         config.exposeIdsFor(Autor.class);
         config.exposeIdsFor(Livro.class);
+        config.exposeIdsFor(Usuario.class);
     }
+    
+
 }
